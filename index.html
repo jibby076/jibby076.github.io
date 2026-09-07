@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jibreel Adam | AI &amp; Conservation Tech</title>
-  <meta name="description" content="Muhammad Jibreel Habib Adam — Computer Engineering student building climate, AI, and conservation technology. Flutter developer from Istanbul." />
-  <meta name="theme-color" content="#04070a" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>" />
+  <title>Jibreel Adam | Mechatronic · Tinkerer · Builder</title>
+  <meta name="description" content="Muhammad Jibreel Habib Adam — mechatronics-minded tinkerer and builder wiring hardware, shipping software, working on cars, and building machines that serve people and the planet." />
+  <meta name="theme-color" content="#070b0e" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,4 90,27 90,73 50,96 10,73 10,27' fill='%2329f0a2'/><polygon points='50,22 74,35 74,65 50,78 26,65 26,35' fill='%230d1416'/></svg>" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -45,57 +45,64 @@
         <button class="rail-dot" data-goto="4" aria-label="Contact"><span></span></button>
       </aside>
 
+      <div class="scroll-nav">
+        <button class="scroll-nav-btn" id="navPrev" aria-label="Previous page" disabled>&#8593;</button>
+        <span class="scroll-nav-page mono-line" id="navPage">1 / 5</span>
+        <button class="scroll-nav-btn" id="navNext" aria-label="Next page">&#8595;</button>
+      </div>
+
       <div class="vignette" aria-hidden="true"></div>
 
       <!-- ===== PANEL 01 — HERO ===== -->
       <section class="panel" id="hero" data-panel="0">
         <div class="panel-inner">
-          <p class="mono-line">// root@earth && whoami</p>
           <h1 class="hero-name">
             Muhammad Jibreel<br />
             <span class="accent">Habib Adam</span>
           </h1>
           <p class="hero-tagline">
-            Computer Engineering student @ <span class="hl">Fenerbahçe University</span>
-            &mdash; building with <span class="hl">AI</span>, <span class="hl">Flutter</span>
-            and <span class="hl">conservation technology</span>.
-          </p>
-          <p class="hero-stats mono-line">
-            <span>3+ active projects</span><i></i>
-            <span>5 languages</span><i></i>
-            <span>1 planet to protect</span>
+            Mechatronics-minded <span class="hl">tinkerer &amp; builder</span> &mdash;
+            wiring <span class="hl">hardware</span>, shipping <span class="hl">software</span>,
+            and dreaming up machines that give a damn.
           </p>
         </div>
-        <p class="scroll-cue mono-line">scroll to explore ↓</p>
       </section>
 
       <!-- ===== PANEL 02 — ABOUT ===== -->
       <section class="panel" id="about" data-panel="1">
         <div class="panel-inner">
           <div class="panel-head">
-            <span class="panel-idx">[ 01 ]</span>
             <h2 class="panel-title">About</h2>
           </div>
-          <div class="about-body">
-            <p class="about-lead">
-              I&rsquo;m a Computer Engineering student who believes technology should fight
-              for the planet we live on. My work sits at the intersection of
-              <span class="hl">AI</span>, <span class="hl">software engineering</span> and
-              <span class="hl">conservation technology</span> &mdash; building tools that make
-              people and nature work together.
-            </p>
-            <p class="about-sub">
-              I build with <span class="hl">Flutter</span>, think in <span class="hl">Python</span>
-              and <span class="hl">C++</span>, and I&rsquo;m currently sharpening machine learning,
-              algorithms, backend development, and cloud computing.
-            </p>
+          <div class="about-grid">
+            <div class="about-body">
+              <p class="about-lead">
+                The kind of builder who opens things up before being told to &mdash; a
+                <span class="hl">tinkerer</span> in <span class="hl">mechatronics</span>, equally
+                at home in a garage, at a workbench, and in a terminal.
+              </p>
+              <p class="about-sub">
+                Software: <span class="hl">Flutter</span>, <span class="hl">Python</span>,
+                <span class="hl">C++</span>. Hardware: <span class="hl">Arduino</span>,
+                <span class="hl">Raspberry Pi</span>, wiring it all up. Never far from a car
+                I&rsquo;m trying to understand or improve.
+              </p>
+              <p class="about-sub">
+                Beyond the bench: <span class="hl">adventure-seeker</span> and
+                <span class="hl">activist</span> &mdash; because the machinery that matters most
+                keeps people and the planet running.
+              </p>
+            </div>
+            <ul class="about-chips">
+              <li><span class="chip-ico">[+]</span> Tinkerer</li>
+              <li><span class="chip-ico">[*]</span> Mechatronics</li>
+              <li><span class="chip-ico">&lt;&gt;</span> Software × Hardware</li>
+              <li><span class="chip-ico">(_)</span> Cars &amp; Machines</li>
+              <li><span class="chip-ico">/\</span> Adventure Seeker</li>
+              <li><span class="chip-ico">[!]</span> Activist</li>
+              <li><span class="chip-ico">(@)</span> Planet-Builder</li>
+            </ul>
           </div>
-          <ul class="about-chips">
-            <li><span class="chip-ico">🌍</span> Climate &amp; Biodiversity</li>
-            <li><span class="chip-ico">🤖</span> AI &amp; Software Engineering</li>
-            <li><span class="chip-ico">📱</span> Flutter Developer</li>
-            <li><span class="chip-ico">🌱</span> Conservation Technology</li>
-          </ul>
         </div>
       </section>
 
@@ -103,50 +110,53 @@
       <section class="panel" id="skills" data-panel="2">
         <div class="panel-inner panel-inner-wide">
           <div class="panel-head">
-            <span class="panel-idx">[ 02 ]</span>
             <h2 class="panel-title">Skills &amp; Toolbox</h2>
           </div>
           <div class="skills-row">
             <div class="skill-group">
-              <h3 class="skill-group-title">Languages</h3>
+              <h3 class="skill-group-title">Software</h3>
               <div class="skill">
                 <div class="skill-meta"><span>Python</span><em>85%</em></div>
                 <div class="bar"><div class="bar-fill" data-pct="85"></div></div>
               </div>
               <div class="skill">
-                <div class="skill-meta"><span>Dart</span><em>75%</em></div>
-                <div class="bar"><div class="bar-fill" data-pct="75"></div></div>
+                <div class="skill-meta"><span>C++</span><em>72%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="72"></div></div>
               </div>
               <div class="skill">
-                <div class="skill-meta"><span>C++</span><em>70%</em></div>
-                <div class="bar"><div class="bar-fill" data-pct="70"></div></div>
-              </div>
-              <div class="skill">
-                <div class="skill-meta"><span>SQL</span><em>65%</em></div>
-                <div class="bar"><div class="bar-fill" data-pct="65"></div></div>
-              </div>
-            </div>
-            <div class="skill-group">
-              <h3 class="skill-group-title">Engineering</h3>
-              <div class="skill">
-                <div class="skill-meta"><span>Flutter</span><em>80%</em></div>
-                <div class="bar"><div class="bar-fill" data-pct="80"></div></div>
+                <div class="skill-meta"><span>Dart / Flutter</span><em>78%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="78"></div></div>
               </div>
               <div class="skill">
                 <div class="skill-meta"><span>Machine Learning</span><em>60%</em></div>
                 <div class="bar"><div class="bar-fill" data-pct="60"></div></div>
               </div>
               <div class="skill">
-                <div class="skill-meta"><span>Data Structures &amp; Algos</span><em>70%</em></div>
+                <div class="skill-meta"><span>Backend &amp; Cloud</span><em>55%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="55"></div></div>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3 class="skill-group-title">Hardware / Mechatronics</h3>
+              <div class="skill">
+                <div class="skill-meta"><span>Arduino &amp; RPi</span><em>80%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="80"></div></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Sensor &amp; Wiring Rigs</span><em>70%</em></div>
                 <div class="bar"><div class="bar-fill" data-pct="70"></div></div>
               </div>
               <div class="skill">
-                <div class="skill-meta"><span>Backend Development</span><em>55%</em></div>
-                <div class="bar"><div class="bar-fill" data-pct="55"></div></div>
+                <div class="skill-meta"><span>Automotive / OBD-II</span><em>65%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="65"></div></div>
               </div>
               <div class="skill">
-                <div class="skill-meta"><span>Cloud Computing</span><em>50%</em></div>
-                <div class="bar"><div class="bar-fill" data-pct="50"></div></div>
+                <div class="skill-meta"><span>Soldering &amp; PCB</span><em>60%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="60"></div></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>CAD / 3D Modeling</span><em>55%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="55"></div></div>
               </div>
             </div>
           </div>
@@ -157,20 +167,19 @@
       <section class="panel" id="projects" data-panel="3">
         <div class="panel-inner panel-inner-wide">
           <div class="panel-head">
-            <span class="panel-idx">[ 03 ]</span>
             <h2 class="panel-title">What I&rsquo;m Building</h2>
           </div>
           <div class="projects-row">
             <article class="project-card">
               <div class="project-top">
-                <span class="project-ico">📈</span>
-                <span class="project-status live">LIVE</span>
+                <span class="project-ico">[&gt;]</span>
+                <span class="project-status live">[UNLOCKED]</span>
               </div>
               <h3 class="project-title">ProAct</h3>
-              <p class="project-sub">Gamified task manager</p>
+              <p class="project-sub">gamified task manager</p>
               <p class="project-desc">
-                Goals turned into quests, streaks kept alive, and whoever you&rsquo;re accountable
-                to kept in the loop. Built for group and self accountability.
+                Goals turned into quests, streaks kept alive, and your accountability crew kept
+                in the loop. Built for group and self accountability.
               </p>
               <ul class="project-tags">
                 <li>Flutter</li><li>Gamification</li><li>Accountability</li>
@@ -182,14 +191,14 @@
 
             <article class="project-card">
               <div class="project-top">
-                <span class="project-ico">📖</span>
-                <span class="project-status">WIP</span>
+                <span class="project-ico">[=]</span>
+                <span class="project-status">[WIP]</span>
               </div>
               <h3 class="project-title">Folio</h3>
-              <p class="project-sub">E-reader</p>
+              <p class="project-sub">e-reader</p>
               <p class="project-desc">
-                A modern e-reader for effortless long-form reading &mdash; clean typography.
-                offline-first, and a calm, focused design.
+                A modern e-reader for long reading &mdash; clean typography, offline-first, and
+                a calm focused build.
               </p>
               <ul class="project-tags">
                 <li>Dart</li><li>Flutter</li><li>Offline</li>
@@ -201,18 +210,18 @@
 
             <article class="project-card">
               <div class="project-top">
-                <span class="project-ico">🤖</span>
-                <span class="project-status seed">SEED</span>
+                <span class="project-ico">(O)</span>
+                <span class="project-status seed">[CLASSIFIED] // SEED</span>
               </div>
               <h3 class="project-title">Root Signals</h3>
-              <p class="project-sub">codename &mdash; undisclosed</p>
+              <p class="project-sub">hydroponics · pcb + rpi</p>
               <p class="project-desc">
-                Small-scale hydroponics reading the room &mdash; or rather the water &mdash;
-                on Raspberry Pi and Arduino with a splash of edge AI. Still in the seed stage;
-                the name is growing, much like the plants.
+                Small-scale hydroponics reading the room &mdash; or rather the water &mdash; on
+                a Raspberry Pi + Arduino rig with a splash of edge AI. The seed stage is growing,
+                much like the plants.
               </p>
               <ul class="project-tags">
-                <li>Raspberry Pi</li><li>Arduino</li><li>AI</li>
+                <li>Raspberry Pi</li><li>Arduino</li><li>Schematics</li><li>Edge AI</li>
               </ul>
               <span class="project-link muted">under lock &amp; leaf</span>
             </article>
@@ -224,21 +233,20 @@
       <section class="panel" id="contact" data-panel="4">
         <div class="panel-inner">
           <div class="panel-head">
-            <span class="panel-idx">[ 04 ]</span>
             <h2 class="panel-title">Let&rsquo;s Build Together</h2>
           </div>
           <p class="contact-intro">
-            Have an idea, a project, or just want to talk tech + nature? The inbox is always open.
+            Got a build, a rig, a cause, or just want to talk machines + meaning? Comms are open.
           </p>
           <div class="contact-row">
             <div class="contact-card">
-              <span class="contact-ico">✉</span>
+              <span class="contact-ico">[@]</span>
               <span class="contact-type mono-line">email</span>
               <code class="contact-value">jibreel@gmail.com</code>
               <button class="copy-btn" data-copy="jibreel@gmail.com">Copy</button>
             </div>
             <div class="contact-card">
-              <span class="contact-ico">☏</span>
+              <span class="contact-ico">[-]</span>
               <span class="contact-type mono-line">phone</span>
               <code class="contact-value">+90 500 000 00 00</code>
               <button class="copy-btn" data-copy="+90 500 000 00 00">Copy</button>
@@ -254,7 +262,7 @@
               LinkedIn
             </a>
           </div>
-          <p class="footline mono-line">built with 🌿 for the planet &copy; <span id="year"></span></p>
+          <p class="footline mono-line">built by hand · for people &amp; planet &copy; <span id="year"></span></p>
         </div>
       </section>
 
@@ -267,6 +275,7 @@
       .viewport { position: static !important; height: auto !important; }
       .panel { position: relative !important; transform: none !important; opacity: 1 !important; min-height: 100vh; }
       .rail { display: none !important; }
+      .scroll-nav { display: none !important; }
     </style>
   </noscript>
 
