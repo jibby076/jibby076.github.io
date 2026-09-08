@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jibreel Adam | Mechatronic · Tinkerer · Builder</title>
+  <meta name="description" content="Muhammad Jibreel Habib Adam — mechatronics-minded tinkerer and builder wiring hardware, shipping software, working on cars, and building machines that serve people and the planet." />
+  <meta name="theme-color" content="#070b0e" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,4 90,27 90,73 50,96 10,73 10,27' fill='%2329f0a2'/><polygon points='50,22 74,35 74,65 50,78 26,65 26,35' fill='%230d1416'/></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Leaf particle field -->
+  <div class="leaf-field" aria-hidden="true"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" data-goto="0">
+        <span class="logo-mark">J</span>
+        <span class="logo-text">JIBREEL<span class="logo-accent">.</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about" data-goto="1">About</a>
+        <a href="#skills" data-goto="2">Skills</a>
+        <a href="#projects" data-goto="3">Projects</a>
+        <a href="#contact" data-goto="4">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== SCROLL STAGE (sticky single viewport) ===== -->
+  <div class="stage">
+    <div class="viewport" id="viewport">
+
+      <!-- Panel progress rail -->
+      <aside class="rail" aria-label="Sections">
+        <button class="rail-dot" data-goto="0" aria-label="Intro" aria-current="true"><span></span></button>
+        <button class="rail-dot" data-goto="1" aria-label="About"><span></span></button>
+        <button class="rail-dot" data-goto="2" aria-label="Skills"><span></span></button>
+        <button class="rail-dot" data-goto="3" aria-label="Projects"><span></span></button>
+        <button class="rail-dot" data-goto="4" aria-label="Contact"><span></span></button>
+      </aside>
+
+      <div class="scroll-nav">
+        <button class="scroll-nav-btn" id="navPrev" aria-label="Previous page" disabled>&#8593;</button>
+        <span class="scroll-nav-page mono-line" id="navPage">1 / 5</span>
+        <button class="scroll-nav-btn" id="navNext" aria-label="Next page">&#8595;</button>
+      </div>
+
+      <div class="vignette" aria-hidden="true"></div>
+
+      <!-- ===== PANEL 01 — HERO ===== -->
+      <section class="panel" id="hero" data-panel="0">
+        <div class="panel-inner">
+          <h1 class="hero-name">
+            Muhammad Jibreel<br />
+            <span class="accent">Habib Adam</span>
+          </h1>
+          <p class="hero-tagline">
+            Mechatronics-minded <span class="hl">tinkerer &amp; builder</span> &mdash;
+            wiring <span class="hl">hardware</span>, shipping <span class="hl">software</span>,
+            and dreaming up machines that give a damn.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== PANEL 02 — ABOUT ===== -->
+      <section class="panel" id="about" data-panel="1">
+        <div class="panel-inner">
+          <div class="panel-head">
+            <h2 class="panel-title">About</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-body">
+              <p class="about-lead">
+                The kind of builder who opens things up before being told to &mdash; a
+                <span class="hl">tinkerer</span> in <span class="hl">mechatronics</span>, equally
+                at home in a garage, at a workbench, and in a terminal.
+              </p>
+              <p class="about-sub">
+                Software: <span class="hl">Flutter</span>, <span class="hl">Python</span>,
+                <span class="hl">C++</span>. Hardware: <span class="hl">Arduino</span>,
+                <span class="hl">Raspberry Pi</span>, wiring it all up. Never far from a car
+                I&rsquo;m trying to understand or improve.
+              </p>
+              <p class="about-sub">
+                Beyond the bench: <span class="hl">adventure-seeker</span> and
+                <span class="hl">activist</span> &mdash; because the machinery that matters most
+                keeps people and the planet running.
+              </p>
+            </div>
+            <ul class="about-chips">
+              <li><span class="chip-ico">[+]</span> Tinkerer</li>
+              <li><span class="chip-ico">[*]</span> Mechatronics</li>
+              <li><span class="chip-ico">&lt;&gt;</span> Software × Hardware</li>
+              <li><span class="chip-ico">(_)</span> Cars &amp; Machines</li>
+              <li><span class="chip-ico">/\</span> Adventure Seeker</li>
+              <li><span class="chip-ico">[!]</span> Activist</li>
+              <li><span class="chip-ico">(@)</span> Planet-Builder</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PANEL 03 — SKILLS ===== -->
+      <section class="panel" id="skills" data-panel="2">
+        <div class="panel-inner panel-inner-wide">
+          <div class="panel-head">
+            <h2 class="panel-title">Skills &amp; Toolbox</h2>
+          </div>
+          <div class="skills-row">
+            <div class="skill-group">
+              <h3 class="skill-group-title">Software</h3>
+              <div class="skill">
+                <div class="skill-meta"><span>Python</span><em>85%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="85"></div></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>C++</span><em>72%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="72"></div></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Dart / Flutter</span><em>78%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="78"></div></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Machine Learning</span><em>60%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="60"></div></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Backend &amp; Cloud</span><em>55%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="55"></div></div>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3 class="skill-group-title">Hardware / Mechatronics</h3>
+              <div class="skill">
+                <div class="skill-meta"><span>Arduino &amp; RPi</span><em>80%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="80"></div></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Sensor &amp; Wiring Rigs</span><em>70%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="70"></div></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Automotive / OBD-II</span><em>65%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="65"></div></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Soldering &amp; PCB</span><em>60%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="60"></div></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>CAD / 3D Modeling</span><em>55%</em></div>
+                <div class="bar"><div class="bar-fill" data-pct="55"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PANEL 04 — PROJECTS ===== -->
+      <section class="panel" id="projects" data-panel="3">
+        <div class="panel-inner panel-inner-wide">
+          <div class="panel-head">
+            <h2 class="panel-title">What I&rsquo;m Building</h2>
+          </div>
+          <div class="projects-row">
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-ico">[&gt;]</span>
+                <span class="project-status live">[UNLOCKED]</span>
+              </div>
+              <h3 class="project-title">ProAct</h3>
+              <p class="project-sub">gamified task manager</p>
+              <p class="project-desc">
+                Goals turned into quests, streaks kept alive, and your accountability crew kept
+                in the loop. Built for group and self accountability.
+              </p>
+              <ul class="project-tags">
+                <li>Flutter</li><li>Gamification</li><li>Accountability</li>
+              </ul>
+              <a href="https://proact.dev.binboi.biz" target="_blank" rel="noopener" class="project-link">
+                Try ProAct <span class="arrow">→</span>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-ico">[=]</span>
+                <span class="project-status">[WIP]</span>
+              </div>
+              <h3 class="project-title">Folio</h3>
+              <p class="project-sub">e-reader</p>
+              <p class="project-desc">
+                A modern e-reader for long reading &mdash; clean typography, offline-first, and
+                a calm focused build.
+              </p>
+              <ul class="project-tags">
+                <li>Dart</li><li>Flutter</li><li>Offline</li>
+              </ul>
+              <a href="https://github.com/jibby076/folio-reader" target="_blank" rel="noopener" class="project-link">
+                View repo <span class="arrow">→</span>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-ico">(O)</span>
+                <span class="project-status seed">[CLASSIFIED] // SEED</span>
+              </div>
+              <h3 class="project-title">Root Signals</h3>
+              <p class="project-sub">hydroponics · pcb + rpi</p>
+              <p class="project-desc">
+                Small-scale hydroponics reading the room &mdash; or rather the water &mdash; on
+                a Raspberry Pi + Arduino rig with a splash of edge AI. The seed stage is growing,
+                much like the plants.
+              </p>
+              <ul class="project-tags">
+                <li>Raspberry Pi</li><li>Arduino</li><li>Schematics</li><li>Edge AI</li>
+              </ul>
+              <span class="project-link muted">under lock &amp; leaf</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PANEL 05 — CONTACT ===== -->
+      <section class="panel" id="contact" data-panel="4">
+        <div class="panel-inner">
+          <div class="panel-head">
+            <h2 class="panel-title">Let&rsquo;s Build Together</h2>
+          </div>
+          <p class="contact-intro">
+            Got a build, a rig, a cause, or just want to talk machines + meaning? Comms are open.
+          </p>
+          <div class="contact-row">
+            <div class="contact-card">
+              <span class="contact-ico">[@]</span>
+              <span class="contact-type mono-line">email</span>
+              <code class="contact-value">jibreel@gmail.com</code>
+              <button class="copy-btn" data-copy="jibreel@gmail.com">Copy</button>
+            </div>
+            <div class="contact-card">
+              <span class="contact-ico">[-]</span>
+              <span class="contact-type mono-line">phone</span>
+              <code class="contact-value">+90 500 000 00 00</code>
+              <button class="copy-btn" data-copy="+90 500 000 00 00">Copy</button>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="https://github.com/jibby076" target="_blank" rel="noopener" class="social-btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.06c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .3.2.66.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/jibreel-adam-28a4183ab/" target="_blank" rel="noopener" class="social-btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-7.7c0-1.84-.03-4.2-2.56-4.2-2.56 0-2.95 2-2.95 4.07V23H8V8z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+          <p class="footline mono-line">built by hand · for people &amp; planet &copy; <span id="year"></span></p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <noscript>
+    <style>
+      .stage { height: auto !important; }
+      .viewport { position: static !important; height: auto !important; }
+      .panel { position: relative !important; transform: none !important; opacity: 1 !important; min-height: 100vh; }
+      .rail { display: none !important; }
+      .scroll-nav { display: none !important; }
+    </style>
+  </noscript>
+
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
