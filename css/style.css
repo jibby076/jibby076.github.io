@@ -61,6 +61,12 @@ code { font-family: var(--mono); }
 .hl { color: var(--green); font-weight: 600; }
 .accent { color: var(--green); }
 
+/* game-mode copy swapping */
+.gm-only { display: none; }
+.gm-tag { display: none; }
+.gamemode .gm-only { display: inline; }
+.gamemode .gm-hide { display: none; }
+
 /* ---------- Leaf field (schematic particle backdrop) ---------- */
 .leaf-field {
   position: fixed;
@@ -225,6 +231,38 @@ code { font-family: var(--mono); }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+.nav-right { display: flex; align-items: center; gap: 10px; }
+
+.gm-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border: 1px solid var(--border-bright);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.gm-toggle:hover { border-color: var(--green-dim); color: var(--text); }
+.gm-toggle-dot {
+  width: 8px; height: 8px;
+  border-radius: 2px;
+  background: var(--text-dark);
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+.gamemode .gm-toggle {
+  color: var(--amber);
+  border-color: var(--green);
+  background: rgba(255, 70, 85, 0.08);
+}
+.gamemode .gm-toggle-dot { background: var(--green); box-shadow: 0 0 10px var(--green-glow); }
+
 /* ============================================================
    Rail (panel indicator)
    ============================================================ */
@@ -342,6 +380,50 @@ code { font-family: var(--mono); }
   color: var(--text-dim);
   font-size: clamp(0.98rem, 1.5vw, 1.12rem);
   margin-bottom: 34px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.72fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+}
+.hero-portrait {
+  position: relative;
+  justify-self: end;
+  width: min(100%, 340px);
+  aspect-ratio: 1146 / 1186;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(41, 240, 162, 0.08);
+}
+.hero-portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(175deg, rgba(41, 240, 162, 0.10), transparent 34%),
+    linear-gradient(350deg, rgba(249, 168, 37, 0.08), transparent 40%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.hero-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.94) contrast(1.03);
+  transition: filter 0.35s ease;
+}
+.hero-portrait:hover img { filter: saturate(1.02) contrast(1.05); }
+.hero-portrait-frame {
+  position: absolute;
+  inset: -9px;
+  border: 1px solid rgba(41, 240, 162, 0.45);
+  border-radius: 10px;
+  pointer-events: none;
+  clip-path: polygon(1.5% 1.5%, calc(100% - 1.5%) 1.5%, calc(100% - 1.5%) calc(100% - 1.5%), 1.5% calc(100% - 1.5%));
 }
 
 /* ============================================================
@@ -721,10 +803,16 @@ code { font-family: var(--mono); }
 @media (max-width: 620px) {
   .contact-row { grid-template-columns: 1fr; max-width: 420px; }
   .panel { padding: calc(var(--nav-h) + 10px) 18px 36px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero-text { text-align: center; }
+  .hero-tagline { margin-left: auto; margin-right: auto; }
+  .hero-portrait { justify-self: center; width: min(76vw, 300px); }
   .project-card { padding: 18px; }
   .about-grid { gap: 16px; }
   .about-lead { margin-bottom: 10px; }
   .about-sub { margin-bottom: 12px; }
+  .gm-toggle-label { display: none; }
+  .gm-toggle { padding: 7px 10px; }
 }
 
 /* shorter viewports: compress so everything fits 100vh */
@@ -734,6 +822,8 @@ code { font-family: var(--mono); }
   .panel-head { margin-bottom: 18px; }
   .hero-name { margin: 12px 0 16px; }
   .hero-tagline { margin-bottom: 26px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 0.5fr); gap: 26px; }
+  .hero-portrait { width: min(100%, 210px); }
   .about-chips { grid-template-columns: 1fr 1fr; gap: 8px; }
   .about-chips li { padding: 9px 14px; }
   .about-lead { margin-bottom: 10px; }
@@ -751,6 +841,7 @@ code { font-family: var(--mono); }
 }
 
 @media (max-height: 620px) {
+  .hero-portrait { display: none; }
   .about-sub { display: none; }
   .project-desc { display: none; }
   .project-tags { margin-bottom: 6px; }
