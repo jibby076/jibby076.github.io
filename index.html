@@ -8,6 +8,10 @@
   <meta name="theme-color" content="#070b0e" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,4 90,27 90,73 50,96 10,73 10,27' fill='%2329f0a2'/><polygon points='50,22 74,35 74,65 50,78 26,65 26,35' fill='%230d1416'/></svg>" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/gamemode.css" />
 </head>
 <body>
   <!-- Leaf particle field -->
@@ -26,9 +30,15 @@
         <a href="#projects" data-goto="3">Projects</a>
         <a href="#contact" data-goto="4">Contact</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <button class="gm-toggle" id="gmToggle" aria-label="Toggle game mode" aria-pressed="false">
+          <span class="gm-toggle-dot" aria-hidden="true"></span>
+          <span class="gm-toggle-label">Game Mode</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -56,15 +66,22 @@
       <!-- ===== PANEL 01 — HERO ===== -->
       <section class="panel" id="hero" data-panel="0">
         <div class="panel-inner">
-          <h1 class="hero-name">
-            Muhammad Jibreel<br />
-            <span class="accent">Habib Adam</span>
-          </h1>
-          <p class="hero-tagline">
-            Mechatronics-minded <span class="hl">tinkerer &amp; builder</span> &mdash;
-            wiring <span class="hl">hardware</span>, shipping <span class="hl">software</span>,
-            and dreaming up machines that give a damn.
-          </p>
+          <div class="hero-grid">
+            <div class="hero-text">
+              <h1 class="hero-name">
+                Muhammad Jibreel<br />
+                <span class="accent">Habib Adam</span>
+              </h1>
+              <p class="hero-tagline">
+                <span class="gm-hide">Mechatronics-minded <span class="hl">tinkerer &amp; builder</span> &mdash; wiring <span class="hl">hardware</span>, shipping <span class="hl">software</span>, and dreaming up machines that give a damn.</span>
+                <span class="gm-only">Tinker &amp; build-machine. Running <span class="hl">hardware</span> duos, solo-queueing <span class="hl">software</span> &mdash; every round aimed at a planet still in the fight.</span>
+              </p>
+            </div>
+            <figure class="hero-portrait">
+              <img src="assets/Jibreel portfolio.png" alt="Muhammad Jibreel Habib Adam">
+              <span class="hero-portrait-frame" aria-hidden="true"></span>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -72,35 +89,31 @@
       <section class="panel" id="about" data-panel="1">
         <div class="panel-inner">
           <div class="panel-head">
-            <h2 class="panel-title">About</h2>
+            <h2 class="panel-title"><span class="gm-hide">About</span><span class="gm-only">Agent Profile</span></h2>
           </div>
           <div class="about-grid">
             <div class="about-body">
               <p class="about-lead">
-                The kind of builder who opens things up before being told to &mdash; a
-                <span class="hl">tinkerer</span> in <span class="hl">mechatronics</span>, equally
-                at home in a garage, at a workbench, and in a terminal.
+                <span class="gm-hide">The kind of builder who opens things up before being told to &mdash; a <span class="hl">tinkerer</span> in <span class="hl">mechatronics</span>, equally at home in a garage, at a workbench, and in a terminal.</span>
+                <span class="gm-only">Agent built to clutch. Opens everything up before anyone asks, grinds <span class="hl">mechatronics</span>, and never GGs when the fight gets messy.</span>
               </p>
               <p class="about-sub">
-                Software: <span class="hl">Flutter</span>, <span class="hl">Python</span>,
-                <span class="hl">C++</span>. Hardware: <span class="hl">Arduino</span>,
-                <span class="hl">Raspberry Pi</span>, wiring it all up. Never far from a car
-                I&rsquo;m trying to understand or improve.
+                <span class="gm-hide">Software: <span class="hl">Flutter</span>, <span class="hl">Python</span>, <span class="hl">C++</span>. Hardware: <span class="hl">Arduino</span>, <span class="hl">Raspberry Pi</span>, wiring it all up. Never far from a car I&rsquo;m trying to understand or improve.</span>
+                <span class="gm-only">Load-out: <span class="hl">Flutter</span>, <span class="hl">Python</span>, <span class="hl">C++</span> &mdash; perks <span class="hl">Arduino</span> + <span class="hl">Raspberry Pi</span>. Passive: never far from a car in the shop.</span>
               </p>
               <p class="about-sub">
-                Beyond the bench: <span class="hl">adventure-seeker</span> and
-                <span class="hl">activist</span> &mdash; because the machinery that matters most
-                keeps people and the planet running.
+                <span class="gm-hide">Beyond the bench: <span class="hl">adventure-seeker</span> and <span class="hl">activist</span> &mdash; because the machinery that matters most keeps people and the planet running.</span>
+                <span class="gm-only">Off-map: grinding real terrain as an <span class="hl">adventure-seeker</span>, maining <span class="hl">activist</span> &mdash; the final objective is people and the planet.</span>
               </p>
             </div>
             <ul class="about-chips">
-              <li><span class="chip-ico">[+]</span> Tinkerer</li>
-              <li><span class="chip-ico">[*]</span> Mechatronics</li>
-              <li><span class="chip-ico">&lt;&gt;</span> Software × Hardware</li>
-              <li><span class="chip-ico">(_)</span> Cars &amp; Machines</li>
-              <li><span class="chip-ico">/\</span> Adventure Seeker</li>
-              <li><span class="chip-ico">[!]</span> Activist</li>
-              <li><span class="chip-ico">(@)</span> Planet-Builder</li>
+              <li><span class="chip-ico">[+]</span><span class="gm-hide">Tinkerer</span><span class="gm-only">Mechanic</span></li>
+              <li><span class="chip-ico">[*]</span><span class="gm-hide">Mechatronics</span><span class="gm-only">Mech Track</span></li>
+              <li><span class="chip-ico">&lt;&gt;</span><span class="gm-hide">Software × Hardware</span><span class="gm-only">Both Lanes</span></li>
+              <li><span class="chip-ico">(_)</span><span class="gm-hide">Cars &amp; Machines</span><span class="gm-only">Garage Map</span></li>
+              <li><span class="chip-ico">/\</span><span class="gm-hide">Adventure Seeker</span><span class="gm-only">Field Op</span></li>
+              <li><span class="chip-ico">[!]</span><span class="gm-hide">Activist</span><span class="gm-only">Humanity Main</span></li>
+              <li><span class="chip-ico">(@)</span><span class="gm-hide">Planet-Builder</span><span class="gm-only">Final: Planet</span></li>
             </ul>
           </div>
         </div>
@@ -110,11 +123,11 @@
       <section class="panel" id="skills" data-panel="2">
         <div class="panel-inner panel-inner-wide">
           <div class="panel-head">
-            <h2 class="panel-title">Skills &amp; Toolbox</h2>
+            <h2 class="panel-title"><span class="gm-hide">Skills &amp; Toolbox</span><span class="gm-only">Stats &amp; Load-Out</span></h2>
           </div>
           <div class="skills-row">
             <div class="skill-group">
-              <h3 class="skill-group-title">Software</h3>
+              <h3 class="skill-group-title"><span class="gm-hide">Software</span><span class="gm-only">Ability I // Software</span></h3>
               <div class="skill">
                 <div class="skill-meta"><span>Python</span><em>85%</em></div>
                 <div class="bar"><div class="bar-fill" data-pct="85"></div></div>
@@ -137,7 +150,7 @@
               </div>
             </div>
             <div class="skill-group">
-              <h3 class="skill-group-title">Hardware / Mechatronics</h3>
+              <h3 class="skill-group-title"><span class="gm-hide">Hardware / Mechatronics</span><span class="gm-only">Ability II // Mechatronics</span></h3>
               <div class="skill">
                 <div class="skill-meta"><span>Arduino &amp; RPi</span><em>80%</em></div>
                 <div class="bar"><div class="bar-fill" data-pct="80"></div></div>
@@ -167,7 +180,7 @@
       <section class="panel" id="projects" data-panel="3">
         <div class="panel-inner panel-inner-wide">
           <div class="panel-head">
-            <h2 class="panel-title">What I&rsquo;m Building</h2>
+            <h2 class="panel-title"><span class="gm-hide">What I&rsquo;m Building</span><span class="gm-only">Match Log &mdash; Active Load-Out</span></h2>
           </div>
           <div class="projects-row">
             <article class="project-card">
@@ -233,21 +246,22 @@
       <section class="panel" id="contact" data-panel="4">
         <div class="panel-inner">
           <div class="panel-head">
-            <h2 class="panel-title">Let&rsquo;s Build Together</h2>
+            <h2 class="panel-title"><span class="gm-hide">Let&rsquo;s Build Together</span><span class="gm-only">Party Up</span></h2>
           </div>
           <p class="contact-intro">
-            Got a build, a rig, a cause, or just want to talk machines + meaning? Comms are open.
+            <span class="gm-hide">Got a build, a rig, a cause, or just want to talk machines + meaning? Comms are open.</span>
+            <span class="gm-only">Running a build, a rig, or a cause? Queue up with me &mdash; party invite stays open.</span>
           </p>
           <div class="contact-row">
             <div class="contact-card">
               <span class="contact-ico">[@]</span>
-              <span class="contact-type mono-line">email</span>
+              <span class="contact-type mono-line"><span class="gm-hide">email</span><span class="gm-only">msg channel</span></span>
               <code class="contact-value">jibreel@gmail.com</code>
               <button class="copy-btn" data-copy="jibreel@gmail.com">Copy</button>
             </div>
             <div class="contact-card">
               <span class="contact-ico">[-]</span>
-              <span class="contact-type mono-line">phone</span>
+              <span class="contact-type mono-line"><span class="gm-hide">phone</span><span class="gm-only">voice channel</span></span>
               <code class="contact-value">+90 500 000 00 00</code>
               <button class="copy-btn" data-copy="+90 500 000 00 00">Copy</button>
             </div>
@@ -262,12 +276,209 @@
               LinkedIn
             </a>
           </div>
-          <p class="footline mono-line">built by hand · for people &amp; planet &copy; <span id="year"></span></p>
+          <p class="footline mono-line"><span class="gm-hide">built by hand · for people &amp; planet</span><span class="gm-only">agent built by hand · for people &amp; planet</span> &copy; <span id="year"></span></p>
         </div>
       </section>
 
     </div>
   </div>
+
+  <div class="gm-tag gm-only" aria-hidden="true">Agent // Jibreel</div>
+
+  <!-- ===== GAME MODE — Valorant-style agent select ===== -->
+  <section class="gm-screen" aria-label="Agent select">
+    <div class="gm-splash" aria-hidden="true"><span>ACT ONE</span><em>AGENT SELECT</em></div>
+    <div class="gm-bg" aria-hidden="true"></div>
+    <div class="gm-gridlines" aria-hidden="true"></div>
+    <div class="gm-scan" aria-hidden="true"></div>
+    <div class="gm-field leaf-field" aria-hidden="true"></div>
+
+    <div class="gm-ui">
+    <header class="gm-top">
+      <div class="gm-logo">
+        <span class="gm-logo-diamond" aria-hidden="true"></span>
+        <div>
+          <div class="gm-logo-text">Tinker</div>
+          <div class="gm-top-sub">Agent Select // Build 0.6</div>
+        </div>
+      </div>
+      <div class="gm-top-right">
+        <span class="gm-custom mono-line">Custom Game <b>// MMX</b></span>
+        <span class="gm-ticker mono-line" aria-hidden="true">
+          <span class="gm-tick-seg">Match <b id="gmMatchId">--:--</b></span>
+          <span class="gm-tick-sep">&#9201;</span>
+          <span class="gm-tick-seg">T+<b id="gmTicker">00:00:000</b></span>
+        </span>
+        <button class="gm-mute" id="gmMute" aria-pressed="false">SND ON</button>
+        <button class="gm-exit" id="gmExit">&#8592; Exit</button>
+      </div>
+    </header>
+
+    <div class="gm-log mono-line" aria-hidden="true"><span id="gmLogText"></span></div>
+
+    <main class="gm-stage">
+      <figure class="gm-portrait">
+        <div class="gm-art">
+          <span class="gm-art-ring" aria-hidden="true"></span>
+          <span class="gm-art-lens" aria-hidden="true"></span>
+          <span class="gm-art-corner tl" aria-hidden="true"></span>
+          <span class="gm-art-corner tr" aria-hidden="true"></span>
+          <span class="gm-art-corner bl" aria-hidden="true"></span>
+          <span class="gm-art-corner br" aria-hidden="true"></span>
+          <div class="gm-art-zoom">
+            <img class="gm-art-base" src="assets/Jibreel Valorant 2.jpg" alt="">
+            <img class="gm-art-top" src="assets/Jibreel Valorant 1.jpg" alt="">
+            <span class="gm-art-scan" aria-hidden="true"></span>
+          </div>
+        </div>
+        <figcaption class="gm-art-label mono-line" id="gmRole">Sentinel // Engineer</figcaption>
+        <div class="gm-hud mono-line" aria-hidden="true"><span>MMR <b>1250</b></span><i></i><span>WINS <b>47</b></span><i></i><span>K/D <b>2.1</b></span></div>
+      </figure>
+
+      <div class="gm-pills-wrap">
+        <div class="gm-pills">
+
+          <div class="gm-pill open" data-pill="agent">
+            <div class="gm-pill-panel">
+              <div class="gm-pill-inner">
+                <div class="gm-pane-kicker mono-line">Agent // Mechatronics</div>
+                <p class="gm-pane-tagline" id="gmTagline">Hardware duo &amp; software lane &mdash; solder, code, wrench, repeat. Built for the long fight.</p>
+                <div class="gm-pane-stats">
+                  <div class="gm-stat"><div class="gm-stat-v">MEC 85</div><div class="gm-stat-k">Hardware</div></div>
+                  <div class="gm-stat"><div class="gm-stat-v">SFT 78</div><div class="gm-stat-k">Software</div></div>
+                  <div class="gm-stat"><div class="gm-stat-v">GRG 70</div><div class="gm-stat-k">Garage</div></div>
+                  <div class="gm-stat"><div class="gm-stat-v">ULT</div><div class="gm-stat-k">Planet</div></div>
+                </div>
+                <div class="gm-ult">
+                  <div class="gm-ult-top mono-line"><span class="gm-ult-unit">Ult // X</span><span class="gm-ult-name" id="gmUltName">Planet-Builder</span></div>
+                  <div class="gm-ult-bar">
+                    <span class="gm-ult-cell"><i></i></span>
+                    <span class="gm-ult-cell"><i></i></span>
+                    <span class="gm-ult-cell"><i></i></span>
+                    <span class="gm-ult-cell"><i></i></span>
+                    <span class="gm-ult-cell"><i></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="gm-pill-head" aria-expanded="true">Agent<span class="gm-pill-idx mono-line">01</span></button>
+          </div>
+
+          <div class="gm-pill" data-pill="skills">
+            <div class="gm-pill-panel">
+              <div class="gm-pill-inner">
+                <div class="gm-pane-cols">
+                  <div class="gm-skill-col">
+                    <h3 class="gm-skill-title">Software</h3>
+                    <div class="skill"><div class="skill-meta"><span>Python</span><em>85%</em></div><div class="bar"><div class="bar-fill" style="--pct:85%"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>C++</span><em>72%</em></div><div class="bar"><div class="bar-fill" style="--pct:72%"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>Dart / Flutter</span><em>78%</em></div><div class="bar"><div class="bar-fill" style="--pct:78%"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>Machine Learning</span><em>60%</em></div><div class="bar"><div class="bar-fill" style="--pct:60%"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>Backend &amp; Cloud</span><em>55%</em></div><div class="bar"><div class="bar-fill" style="--pct:55%"></div></div></div>
+                  </div>
+                  <div class="gm-skill-col">
+                    <h3 class="gm-skill-title">Hardware / Mech</h3>
+                    <div class="skill"><div class="skill-meta"><span>Arduino &amp; RPi</span><em>80%</em></div><div class="bar"><div class="bar-fill" style="--pct:80%"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>Sensor &amp; Wiring Rigs</span><em>70%</em></div><div class="bar"><div class="bar-fill" style="--pct:70%"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>Automotive / OBD-II</span><em>65%</em></div><div class="bar"><div class="bar-fill" style="--pct:65%"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>Soldering &amp; PCB</span><em>60%</em></div><div class="bar"><div class="bar-fill" style="--pct:60%"></div></div></div>
+                    <div class="skill"><div class="skill-meta"><span>CAD / 3D Modeling</span><em>55%</em></div><div class="bar"><div class="bar-fill" style="--pct:55%"></div></div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="gm-pill-head" aria-expanded="false">Skills<span class="gm-pill-idx mono-line">02</span></button>
+          </div>
+
+          <div class="gm-pill" data-pill="projects">
+            <div class="gm-pill-panel">
+              <div class="gm-pill-inner">
+                <div class="gm-loadouts">
+                  <a class="gm-loadout" href="https://proact.dev.binboi.biz" target="_blank" rel="noopener">
+                    <div class="gm-loadout-top"><span class="gm-loadout-name">Quest Blade</span><span class="gm-loadout-status live">Unlocked</span></div>
+                    <p class="gm-loadout-sub">ProAct &mdash; gamified task manager <span class="arrow">&#8594;</span></p>
+                  </a>
+                  <a class="gm-loadout" href="https://github.com/jibby076/folio-reader" target="_blank" rel="noopener">
+                    <div class="gm-loadout-top"><span class="gm-loadout-name">Page Edge</span><span class="gm-loadout-status">WIP</span></div>
+                    <p class="gm-loadout-sub">Folio &mdash; offline-first e-reader <span class="arrow">&#8594;</span></p>
+                  </a>
+                  <div class="gm-loadout">
+                    <div class="gm-loadout-top"><span class="gm-loadout-name">Seed Spike</span><span class="gm-loadout-status seed">Classified</span></div>
+                    <p class="gm-loadout-sub">Root Signals &mdash; hydroponics on RPi + Arduino</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="gm-pill-head" aria-expanded="false">Projects<span class="gm-pill-idx mono-line">03</span></button>
+          </div>
+
+          <div class="gm-pill" data-pill="persona">
+            <div class="gm-pill-panel">
+              <div class="gm-pill-inner">
+                <p class="gm-pane-note mono-line">Pick a calling card &mdash; swaps role + bio.</p>
+                <div class="gm-cards gm-cards-persona">
+                  <button class="gm-chip active" data-role="Sentinel // Engineer" data-tag="Hardware duo & software lane — solder, code, wrench, repeat. Built for the long fight."
+                    data-about="Creator and tinkerer. I break things to understand them, then build them back better — one circuit, one tool, one fix at a time."
+                    data-color="#f2f0e6" data-glow="rgba(232,193,90,0.30)"
+                    data-stats="MEC 85|Hardware~SFT 78|Software~GRG 70|Garage~ULT|Planet" data-ult="Planet-Builder">ENG</button>
+                  <button class="gm-chip" data-role="Controller // Garage" data-tag="Keeps the squad&rsquo;s wheels turning &mdash; tunes, heals and rebuilds on the fly."
+                    data-about="Mechanic by passion — engines, torque wrenches and the smell of oil. The garage is a second home and every car a new puzzle."
+                    data-color="#e8c15a" data-glow="rgba(232,193,90,0.40)"
+                    data-stats="GRG 92|Mechanic~MEC 74|Wrench~SFT 55|Software~ULT|Tune-up" data-ult="Maintenance">GRG</button>
+                  <button class="gm-chip" data-role="Initiator // Software" data-tag="Pushes first. Pings intel, one-taps bugs, clears site for the team."
+                    data-about="Code and circuits in the same breath. Software is another tool in a well-worn belt — precise, sharp, always moving."
+                    data-color="#d4af37" data-glow="rgba(212,175,55,0.40)"
+                    data-stats="SFT 88|Code~MEC 72|Circuits~GRG 58|Garage~ULT|Bugsweep" data-ult="Clean Sweep">SFT</button>
+                  <button class="gm-chip" data-role="Duelist // Mechatronics" data-tag="First into the field &mdash; wired tight and harder to stop."
+                    data-about="Mechatronics student — where hardware and software collide. Sensors, motors, wires, logic, all wired into one build."
+                    data-color="#f5e7b0" data-glow="rgba(245,231,176,0.40)"
+                    data-stats="MEC 90|Mechatronics~SFT 79|Software~GRG 75|Garage~ULT|Full-stack" data-ult="Wired">MEC</button>
+                  <button class="gm-chip" data-role="Field Op // Explorer" data-tag="Off-map sites are still sites &mdash; recon on foot, routes nobody takes."
+                    data-about="Explorer at heart. Off the beaten path and on the ground, finding routes and answers nobody else bothers to look for."
+                    data-color="#c9a33c" data-glow="rgba(201,163,60,0.40)"
+                    data-stats="GRG 68|Route~MEC 66|Rigging~SFT 48|Signal~ULT|Recon" data-ult="Off-Map">FLP</button>
+                  <button class="gm-chip" data-role="Support // Humanity" data-tag="Keeps the squad &mdash; and the planet &mdash; in the fight."
+                    data-about="Rooted in where I come from. I build for people first and planet always — the long game, not the quick score."
+                    data-color="#b98f2f" data-glow="rgba(185,143,47,0.40)"
+                    data-stats="SFT 61|Ensure~MEC 63|Support~GRG 55|Care~ULT|Hope" data-ult="Last Objective">ACT</button>
+                  <button class="gm-chip" data-role="Final Agent // Planet" data-tag="The last objective: a planet still on our side."
+                    data-about="Planet builder. The last objective is the one that matters — leaving a world that is still on our side."
+                    data-color="#f0d77b" data-glow="rgba(240,215,123,0.40)"
+                    data-stats="MEC 80|System~SFT 82|Loop~GRG 78|Long game~ULT|Planet" data-ult="Planet-Builder">PLT</button>
+                </div>
+                <div class="gm-persona-readout" role="status" aria-live="polite">
+                  <div class="gm-readout-kicker mono-line">Calling card // Active</div>
+                  <div class="gm-readout-role" id="gmPersonaRole">Sentinel // Engineer</div>
+                  <p class="gm-readout-about" id="gmPersonaAbout">Creator and tinkerer. I break things to understand them, then build them back better &mdash; one circuit, one tool, one fix at a time.</p>
+                </div>
+              </div>
+            </div>
+            <button class="gm-pill-head" aria-expanded="false">Persona<span class="gm-pill-idx mono-line">04</span></button>
+          </div>
+
+          <div class="gm-pill" data-pill="comms">
+            <div class="gm-pill-panel">
+              <div class="gm-pill-inner">
+                <div class="gm-comms">
+                  <div class="gm-comms-row"><span class="gm-comms-type mono-line">msg channel</span><code>jibreel@gmail.com</code><button class="copy-btn" data-copy="jibreel@gmail.com">Copy</button></div>
+                  <div class="gm-comms-row"><span class="gm-comms-type mono-line">voice channel</span><code>+90 500 000 00 00</code><button class="copy-btn" data-copy="+90 500 000 00 00">Copy</button></div>
+                </div>
+                <div class="gm-social">
+                  <a class="gm-social-btn" href="https://github.com/jibby076" target="_blank" rel="noopener">GitHub <span class="arrow">&#8599;</span></a>
+                  <a class="gm-social-btn" href="https://www.linkedin.com/in/jibreel-adam-28a4183ab/" target="_blank" rel="noopener">LinkedIn <span class="arrow">&#8599;</span></a>
+                </div>
+              </div>
+            </div>
+            <button class="gm-pill-head" aria-expanded="false">Comms<span class="gm-pill-idx mono-line">05</span></button>
+          </div>
+
+        </div>
+
+        <button class="gm-play" id="gmPlay">Ready<span>&#8594;</span></button>
+      </div>
+    </main>
+  </div>
+  </section>
 
   <noscript>
     <style>
@@ -281,5 +492,6 @@
 
   <script src="js/particles.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/gamemode.js"></script>
 </body>
 </html>
